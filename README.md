@@ -1,6 +1,6 @@
-# LearnX Premium Learning OS — V8
+# LearnX Premium Learning OS — V9
 
-V8 focuses on a smooth mobile-first learning experience:
+V9 focuses on a smooth mobile-first learning experience:
 
 - Exact user-provided fingerprint screen reference is used for the access gate.
 - Intro audio/video is isolated from dashboard audio.
