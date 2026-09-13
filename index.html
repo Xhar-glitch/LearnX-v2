@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f5f1">
+<meta name="description" content="LearnX Premium Learning OS — ruang belajar interaktif.">
+<title>LearnX — Premium Learning OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
+
+<section id="gate" class="gate">
+  <div class="gate-ring ring-one"></div><div class="gate-ring ring-two"></div>
+  <div class="gate-card">
+    <div class="gate-brand"><span class="lx-mark">LX</span><b>LEARNX</b></div>
+    <div class="gate-title">Verifikasi Akses</div>
+    <div class="gate-sub">Sentuh sensor untuk membuka Learning OS.</div>
+    <button id="fingerprint" class="fingerprint" aria-label="Sentuh fingerprint untuk membuka LearnX">
+      <img src="assets/fingerprint-reference.png" alt="" class="fingerprint-image">
+      <span class="fingerprint-scan"></span><span class="fingerprint-glint"></span>
+    </button>
+    <div id="authStatus" class="auth-status"><i></i>SENSOR SIAP</div>
+  </div>
+</section>
+
+<section id="intro" class="intro hidden" aria-label="LearnX intro">
+  <video id="introVideo" playsinline webkit-playsinline preload="auto" poster="assets/intro-poster.jpg"><source src="assets/intro.mp4" type="video/mp4"></video>
+  <div class="intro-brand"><span class="intro-icon" data-icon="learnx"></span><b>LearnX</b></div>
+  <div id="nextWrap" class="next-wrap hidden"><button id="nextBtn" class="next-btn">Berikutnya <span data-icon="arrow"></span></button></div>
+</section>
+
+<div id="app" class="app hidden">
+  <main id="dashboard" class="dashboard">
+    <header class="base-header">
+      <button class="brand-button" aria-label="LearnX" data-page="dashboard"><span class="brand-icon" data-icon="learnx"></span><span>LearnX</span></button>
+      <div></div>
+    </header>
+
+    <section class="hero-video">
+      <video id="dashboardVideo" playsinline webkit-playsinline preload="none" muted loop poster="assets/dashboard-base-poster.jpg" aria-label="Video dashboard LearnX"><source src="assets/dashboard-base.mp4" type="video/mp4"></video>
+      <button id="dashboardMute" class="video-mute" aria-label="Matikan suara video"><span data-icon="volume-off"></span></button>
+    </section>
+
+    <section class="curriculum-section">
+      <div class="section-head"><div><small>LEARNX CURRICULUM</small><h2>Pilih ruang belajar</h2></div><button class="text-btn" data-page="curriculum">Semua</button></div>
+      <div class="rail" id="curriculumRail" aria-label="Pilihan kurikulum">
+        <button class="course-card active" data-module="Matematika"><span class="course-icon" data-icon="math"></span><b>Matematika</b><small>12 modul</small></button>
+        <button class="course-card" data-module="Bahasa Indonesia"><span class="course-icon" data-icon="indonesia"></span><b>B. Indonesia</b><small>10 modul</small></button>
+        <button class="course-card" data-module="Bahasa Inggris"><span class="course-icon" data-icon="english"></span><b>B. Inggris</b><small>10 modul</small></button>
+        <button class="course-card" data-module="Bahasa Jepang"><span class="course-icon" data-icon="japan"></span><b>Jepang</b><small>18 modul</small></button>
+        <button class="course-card" data-module="IPA"><span class="course-icon" data-icon="science"></span><b>IPA</b><small>11 modul</small></button>
+        <button class="course-card" data-module="IPS"><span class="course-icon" data-icon="social"></span><b>IPS</b><small>9 modul</small></button>
+        <button class="course-card" data-module="PKN"><span class="course-icon" data-icon="civics"></span><b>PKN</b><small>8 modul</small></button>
+        <button class="course-card" data-module="Informatika"><span class="course-icon" data-icon="code"></span><b>Informatika</b><small>14 modul</small></button>
+        <button class="course-card" data-module="Seni Budaya"><span class="course-icon" data-icon="art"></span><b>Seni Budaya</b><small>10 modul</small></button>
+        <button class="course-card" data-module="PJOK"><span class="course-icon" data-icon="sport"></span><b>PJOK</b><small>8 modul</small></button>
+        <button class="course-card" data-module="Filsafat & Sosial"><span class="course-icon" data-icon="philosophy"></span><b>Filsafat</b><small>12 modul</small></button>
+        <button class="course-card" data-module="Komunikasi Etis"><span class="course-icon" data-icon="strategy"></span><b>Komunikasi</b><small>8 modul</small></button>
+      </div>
+    </section>
+
+    <section class="quick-section" aria-label="Fitur belajar utama">
+      <button class="quick-card" data-page="iq"><span class="feature-icon" data-icon="brain"></span><span><small>COGNITIVE</small><b>Logika & IQ</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+      <button class="quick-card" data-page="japanese"><span class="feature-icon" data-icon="japan"></span><span><small>LANGUAGE</small><b>Belajar Jepang</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+      <button class="quick-card" data-page="qa"><span class="feature-icon" data-icon="chat"></span><span><small>AI-STYLE</small><b>Tanya Jawab</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+      <button class="quick-card" data-page="philosophy"><span class="feature-icon" data-icon="philosophy"></span><span><small>THINKING</small><b>Filsafat & Sosial</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+      <button class="quick-card" data-page="notes"><span class="feature-icon" data-icon="note"></span><span><small>KNOWLEDGE</small><b>Catatan</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+      <button class="quick-card" data-page="focus"><span class="feature-icon" data-icon="focus"></span><span><small>DEEP WORK</small><b>Focus</b></span><span class="quick-arrow" data-icon="arrow"></span></button>
+    </section>
+  </main>
+
+  <section id="curriculum" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Kurikulum</h1><p>Pilih mata pelajaran untuk membuka materi, latihan, dan cara belajar.</p><div id="moduleGrid" class="module-grid"></div></section>
+
+  <section id="moduleDetail" class="page hidden"><button class="back" data-page="curriculum"><span data-icon="back"></span>Kurikulum</button><div id="moduleContent"></div></section>
+
+  <section id="japanese" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Bahasa Jepang</h1><p>Belajar dari karakter → bunyi → kosakata → kalimat → latihan.</p><div class="lesson-grid"><article class="lesson-card"><span data-icon="japan"></span><b>Hiragana</b><small>あ い う え お · hafalkan 5 karakter per sesi.</small><button class="lesson-btn" data-lesson="hiragana">Mulai belajar</button></article><article class="lesson-card"><span data-icon="japan"></span><b>Katakana</b><small>ア イ ウ エ オ · pola bunyi yang sama.</small><button class="lesson-btn" data-lesson="katakana">Mulai belajar</button></article><article class="lesson-card"><span data-icon="book"></span><b>Kosakata dasar</b><small>あいさつ, angka, waktu, sekolah, keluarga.</small><button class="lesson-btn" data-lesson="vocab">Mulai belajar</button></article><article class="lesson-card"><span data-icon="chat"></span><b>Percakapan</b><small>Perkenalan dan kalimat sederhana.</small><button class="lesson-btn" data-lesson="conversation">Mulai belajar</button></article></div><div id="japanLesson" class="lesson-output hidden"></div></section>
+
+  <section id="philosophy" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Filsafat & Sosial</h1><p>Belajar berpikir kritis, mengenali argumen, membaca situasi sosial, dan berkomunikasi secara etis.</p><div class="lesson-grid"><article class="lesson-card"><span data-icon="philosophy"></span><b>Berpikir kritis</b><small>Bedakan fakta, opini, asumsi, bukti, dan kesimpulan.</small><button class="lesson-btn" data-phil="critical">Pelajari</button></article><article class="lesson-card"><span data-icon="strategy"></span><b>Persuasi etis</b><small>Bangun argumen kuat tanpa menipu atau mengeksploitasi orang.</small><button class="lesson-btn" data-phil="persuasion">Pelajari</button></article><article class="lesson-card"><span data-icon="shield"></span><b>Deteksi manipulasi</b><small>Kenali tekanan, guilt-tripping, gaslighting, dan klaim tanpa bukti.</small><button class="lesson-btn" data-phil="defense">Pelajari</button></article><article class="lesson-card"><span data-icon="book"></span><b>Filsafat dasar</b><small>Socrates, Plato, Aristoteles, logika, etika, dan epistemologi.</small><button class="lesson-btn" data-phil="philosophy">Pelajari</button></article></div><div id="philLesson" class="lesson-output hidden"></div></section>
+
+  <section id="qa" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Tanya Jawab</h1><p>Tulis pertanyaan pelajaran. LearnX akan mencocokkan topik dari bank materi lokal.</p><div class="qa-box"><textarea id="qaInput" placeholder="Contoh: Apa fungsi mitokondria? / Jelaskan persamaan kuadrat / Apa itu sila ke-3?"></textarea><button id="qaAsk" class="primary-btn">Cari jawaban</button><div id="qaAnswer" class="qa-answer hidden"></div></div><div class="qa-chips"><button data-q="Apa fungsi mitokondria?">IPA</button><button data-q="Apa rumus luas segitiga?">Matematika</button><button data-q="Apa itu teks LHO?">B. Indonesia</button><button data-q="What is simple past tense?">B. Inggris</button><button data-q="Apa bunyi vokal hiragana dasar?">Jepang</button><button data-q="Apa makna sila ketiga Pancasila?">PKN</button></div></section>
+
+  <section id="iq" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Tes Logika</h1><p>Latihan penalaran dinamis. Skor ini adalah skor latihan aplikasi, bukan pengukuran IQ klinis.</p><div class="quiz"><div class="quiz-top"><span id="iqProgress">SOAL 1 / 10</span><button id="newIq" class="small-btn">Set baru</button></div><div class="quiz-line"><i id="iqBar"></i></div><h2 id="iqQuestion">Memuat...</h2><div id="iqAnswers" class="answers"></div><div id="iqResult" class="result hidden"></div></div></section>
+
+  <section id="notes" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Catatan</h1><p>Tersimpan otomatis di perangkat.</p><textarea id="notesArea" placeholder="Tulis ringkasan atau target belajar..."></textarea></section>
+  <section id="focus" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Focus</h1><p>Sesi fokus ringan.</p><div class="focus-box"><strong id="timer">25:00</strong><div><button id="timerStart">Mulai</button><button id="timerReset">Reset</button></div></div></section>
+  <section id="progress" class="page hidden"><button class="back" data-page="dashboard"><span data-icon="back"></span>Dashboard</button><h1>Progress</h1><p>Ringkasan aktivitas lokal.</p><div class="progress-cards"><article><b id="sessionCount">0</b><small>Sesi</small></article><article><b id="bestIq">—</b><small>Logika terbaik</small></article><article><b id="noteCount">0</b><small>Karakter catatan</small></article></div></section>
+</div>
+
+<!-- Music is intentionally hidden until the dashboard is opened. -->
+<div id="musicIsland" class="music-island" aria-live="polite">
+  <button id="musicToggle" class="island-button" aria-label="Buka musik"><span data-icon="music"></span><span class="island-label">Music</span></button>
+  <div id="musicPanel" class="music-panel hidden">
+    <div class="music-row"><span class="disc"></span><div><b id="trackName">LearnX Ambient</b><small id="trackState">Pilih audio</small></div><button id="musicPlay">Play</button></div>
+    <input id="musicSearch" placeholder="Cari musik di web..." autocomplete="off">
+    <div id="musicList"></div>
+    <label class="music-upload">Tambah musik dari perangkat<input id="musicFile" type="file" accept="audio/*"></label>
+    <audio id="audio" preload="metadata"></audio>
+  </div>
+</div>
+
+<script src="icon-system.js?v=8"></script>
+<script src="app.js?v=8"></script>
+</body>
+</html>
